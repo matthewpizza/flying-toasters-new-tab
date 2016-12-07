@@ -1,0 +1,8 @@
+{
+  "name": "Flying Toasters New Tab",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  }
+}

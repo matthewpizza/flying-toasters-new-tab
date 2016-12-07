@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      html,
+      body {
+        background-color: #111;
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .toaster {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        background-image: url(data:image/gif;base64,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);
+      }
+      .toast {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        background-image: url(data:image/gif;base64,R0lGODlhQABAAKIGAP/MZsyZM5lmAGYzAMxmAP//mTMzMwAAACH5BAEAAAYALAAAAABAAEAAAAP/aLrc/jDKSau9OOvNu/9gKI5kaZ5oqq5s675wLM/0Atx1de97/hQFXgAw7PkMu6GSeCviZknmctk0voJVZWC7lfKsKSCWqBVwzVym92kCfsncLTpdpIJB4qQ2bu4H5nRTdxtuX3tnf38CfnFdVE4dY2RSe4t+l2iAdoMWklN8mH2iiY5eTmydQqZyioqWr4mapW8YWHVwpK+6urmOs18XnpSIoruLsY1rbwAWA7aryMXGx42Cp6gSBM6qjdJyltHWk8sFFQPaz5+xsMfg1ePLN+UU2uhjh6zhyMrxOwUCFQjUO3dvUjVWstL0IwJkAEB6As8RVLOnCSlEv24xCVJguYDDhxPORdQ2kWIWPoHUkOvo0SPIkPUGSjI1zJeTUxxbflyEQSJJAoWiwBnGT15DnQI+ZhDpc1sXbjTfHNW58+UFpjJVQb0GYCpSSx4EDiQZdKFRllRfhcCKtaxJeVQduuQ5QmTEpkGdTE36cScKu2OdSTqatHDVFR7FNgUqxrDcwnRdAL77ky/kyDBaih2ZlMAivz7s+jSMObRikkqPNEg8cIDqCDpfy55Nu7bt27hz697Nu7fvBwkAADs=);
+      }
+
+      /**
+       * Toaster Animations
+       *
+       * There are several kinds of toaster animations, marked as t1, t2, & t3.
+       *
+       * T1 is fastest speed
+       * T2 is mid speed & flaps out of sequence with T1
+       * T3 is the common speed
+       * T4 is a deleyd batch going at the fastest speed
+       * T5, T6, T7, T8, & T9 are a delayed batch of toasters going at the common speed
+       */
+      .t1 {
+        animation: flap .2s steps(4) infinite alternate, fly 10s linear infinite;
+      }
+      .t2 {
+        animation: flap .2s steps(4) infinite alternate-reverse, fly 16s linear infinite;
+      }
+      .t3 {
+        animation: flap .2s steps(4) infinite alternate, fly 24s linear infinite;
+      }
+      .t4 {
+        animation: flap .2s steps(4) infinite alternate, fly 10s 5s linear infinite;
+      }
+      .t5 {
+        animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 4s linear infinite;
+      }
+      .t6 {
+        animation: flap .2s steps(4) infinite alternate, fly 24s 8s linear infinite;
+      }
+      .t7 {
+        animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 12s linear infinite;
+      }
+      .t8 {
+        animation: flap .2s steps(4) infinite alternate, fly 24s 16s linear infinite;
+      }
+      .t9 {
+        animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 20s linear infinite;
+      }
+      /**
+       * Toast Animations
+       *
+       * There are several kinds of toaster animations, marked as ts1, ts2, & ts3.
+       *
+       * Tst1 is fast
+       * Tst2 is mid speed
+       * Tst3 is the common speed
+       * Tst4 is a delayed batch of toast going at the common speed
+       */
+      .tst1 {
+        animation: fly 10s linear infinite;
+      }
+      .tst2 {
+        animation: fly 16s linear infinite;
+      }
+      .tst3 {
+        animation: fly 24s linear infinite;
+      }
+      .tst4 {
+        animation: fly 24s 12s linear infinite;
+      }
+
+      /**
+       * Starting positions of objects (both toast & toasters).
+       *  - There is a different position for each object to prevent overlapping.
+       *  - We use percentages in order to accomodate for all window dimensions.
+       *  - Use -6% as the smallest amount for remaining off-screen.
+       *  - Organized into reverse "L" shaped batches to keep a constant flow.
+       */
+      /* Batch 1 (-10% to -20%) */
+      /* Top edge, from right to left */
+      .p6 { right: -2%; top: -10%; }
+      .p7 { right: 10%; top: -12%; }
+      .p8 { right: 20%; top: -18%; }
+      .p9 { right: 30%; top: -13%; }
+      .p10 { right: 40%; top: -17%; }
+      .p11 { right: 50%; top: -11%; }
+      .p12 { right: 60%; top: -20%; }
+      /* Right side, from top to bottom */
+      .p13 { right: -10%; top: 10%; }
+      .p14 { right: -13%; top: 20%; }
+      .p15 { right: -17%; top: 30%; }
+      .p16 { right: -15%; top: 50%; }
+      .p17 { right: -20%; top: 70%; }
+
+      /* Batch 2 (-20% to -40%) */
+      /* Top edge, from right to left */
+      .p18 { right: 0%; top: -26%; }
+      .p19 { right: 10%; top: -20%; }
+      .p20 { right: 20%; top: -36%; }
+      .p21 { right: 30%; top: -24%; }
+      .p22 { right: 40%; top: -33%; }
+      .p23 { right: 60%; top: -40%; }
+      /* Right side, from top to bottom */
+      .p24 { right: -26%; top: 10%; }
+      .p25 { right: -36%; top: 30%; }
+      .p26 { right: -29%; top: 50%; }
+
+      /* Batch 3 (-40% to -60%)*/
+      /* Top edge, from right to left */
+      .p27 { right: 0; top: -46%; }
+      .p28 { right: 10%; top: -56%; }
+      .p29 { right: 20%; top: -49%; }
+      .p30 { right: 30%; top: -60%; }
+      /* Right side, from top to bottom */
+      .p31 { right: -46%; top: 10%; }
+      .p32 { right: -56%; top: 20%; }
+      .p33 { right: -49%; top: 30%; }
+
+      /* Flapping animation */
+      @-webkit-keyframes flap {
+       from { background-position:    0px; }
+         to { background-position: -256px; }
+      }
+      @-moz-keyframes flap {
+         from { background-position:    0px; }
+           to { background-position: -256px; }
+      }
+      @-o-keyframes flap {
+         from { background-position:    0px; }
+           to { background-position: -256px; }
+      }
+      @keyframes flap {
+         from { background-position:    0px; }
+           to { background-position: -256px; }
+      }
+
+      /* Gliding animation using translate */
+      /* Moving 1600px, to accomodate for large screens */
+      @-webkit-keyframes fly {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(-1600px, 1600px);
+        }
+      }
+      @-moz-keyframes fly {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(-1600px, 1600px);
+        }
+      }
+      @-o-keyframes fly {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(-1600px, 1600px);
+        }
+      }
+      @keyframes fly {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(-1600px, 1600px);
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- First group of objects -->
+    <div class="toaster t1 p6"></div>
+    <div class="toaster t3 p7"></div>
+    <div class="toast tst1 p8"></div>
+    <div class="toaster t3 p9"></div>
+    <div class="toaster t1 p11"></div>
+    <div class="toaster t3 p12"></div>
+    <div class="toaster t2 p13"></div>
+    <div class="toast tst3 p14"></div>
+    <div class="toast tst2 p16"></div>
+    <div class="toaster t1 p17"></div>
+    <div class="toast tst2 p19"></div>
+    <div class="toast tst3 p20"></div>
+    <div class="toaster t2 p21"></div>
+    <div class="toast tst1 p24"></div>
+    <div class="toaster t1 p22"></div>
+    <div class="toast tst2 p26"></div>
+    <div class="toaster t1 p28"></div>
+    <div class="toast tst2 p30"></div>
+    <div class="toaster t2 p31"></div>
+    <div class="toaster t1 p32"></div>
+    <div class="toast tst3 p33"></div>
+
+    <!-- wave 1 of (fast delayed) objects -->
+    <div class="toaster t4 p27"></div>
+    <div class="toaster t4 p10"></div>
+    <div class="toaster t4 p25"></div>
+    <div class="toaster t4 p29"></div>
+
+    <!-- wave 2 of (delayed) objects -->
+    <div class="toaster t5 p15"></div>
+    <div class="toaster t5 p18"></div>
+    <div class="toaster t5 p22"></div>
+
+    <!-- wave 3 of (delayed) objects -->
+    <div class="toaster t6 p6"></div>
+    <div class="toaster t6 p11"></div>
+    <div class="toaster t6 p15"></div>
+    <div class="toaster t6 p19"></div>
+    <div class="toaster t6 p23"></div>
+
+    <!-- wave 5 of (delayed) objects -->
+    <div class="toast tst4 p10"></div>
+    <div class="toast tst4 p23"></div>
+    <div class="toast tst4 p15"></div>
+    <div class="toaster t7 p7"></div>
+    <div class="toaster t7 p12"></div>
+    <div class="toaster t7 p16"></div>
+    <div class="toaster t7 p20"></div>
+    <div class="toaster t7 p24"></div>
+
+    <!-- wave 6 of (delayed) objects -->
+    <div class="toaster t8 p8"></div>
+    <div class="toaster t8 p13"></div>
+    <div class="toaster t8 p17"></div>
+    <div class="toaster t8 p25"></div>
+
+    <!-- wave 7 of (delayed) objects -->
+    <div class="toaster t9 p14"></div>
+    <div class="toaster t9 p18"></div>
+    <div class="toaster t9 p21"></div>
+    <div class="toaster t9 p26"></div>
+
+  </body>
+</html>
