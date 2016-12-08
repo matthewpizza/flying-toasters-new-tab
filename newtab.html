@@ -5,12 +5,11 @@
     <style>
       html,
       body {
-        background-color: #111;
         margin: 0;
         height: 100%;
         overflow: hidden;
+        background-color: #111;
       }
-
       .toaster {
         position: absolute;
         width: 64px;
@@ -23,7 +22,6 @@
         height: 64px;
         background-image: url(data:image/gif;base64,R0lGODlhQABAAKIGAP/MZsyZM5lmAGYzAMxmAP//mTMzMwAAACH5BAEAAAYALAAAAABAAEAAAAP/aLrc/jDKSau9OOvNu/9gKI5kaZ5oqq5s675wLM/0Atx1de97/hQFXgAw7PkMu6GSeCviZknmctk0voJVZWC7lfKsKSCWqBVwzVym92kCfsncLTpdpIJB4qQ2bu4H5nRTdxtuX3tnf38CfnFdVE4dY2RSe4t+l2iAdoMWklN8mH2iiY5eTmydQqZyioqWr4mapW8YWHVwpK+6urmOs18XnpSIoruLsY1rbwAWA7aryMXGx42Cp6gSBM6qjdJyltHWk8sFFQPaz5+xsMfg1ePLN+UU2uhjh6zhyMrxOwUCFQjUO3dvUjVWstL0IwJkAEB6As8RVLOnCSlEv24xCVJguYDDhxPORdQ2kWIWPoHUkOvo0SPIkPUGSjI1zJeTUxxbflyEQSJJAoWiwBnGT15DnQI+ZhDpc1sXbjTfHNW58+UFpjJVQb0GYCpSSx4EDiQZdKFRllRfhcCKtaxJeVQduuQ5QmTEpkGdTE36cScKu2OdSTqatHDVFR7FNgUqxrDcwnRdAL77ky/kyDBaih2ZlMAivz7s+jSMObRikkqPNEg8cIDqCDpfy55Nu7bt27hz697Nu7fvBwkAADs=);
       }
-
       /**
        * Toaster Animations
        *
@@ -84,7 +82,6 @@
       .tst4 {
         animation: fly 24s 12s linear infinite;
       }
-
       /**
        * Starting positions of objects (both toast & toasters).
        *  - There is a different position for each object to prevent overlapping.
@@ -131,25 +128,11 @@
       .p31 { right: -46%; top: 10%; }
       .p32 { right: -56%; top: 20%; }
       .p33 { right: -49%; top: 30%; }
-
       /* Flapping animation */
       @-webkit-keyframes flap {
        from { background-position:    0px; }
          to { background-position: -256px; }
       }
-      @-moz-keyframes flap {
-         from { background-position:    0px; }
-           to { background-position: -256px; }
-      }
-      @-o-keyframes flap {
-         from { background-position:    0px; }
-           to { background-position: -256px; }
-      }
-      @keyframes flap {
-         from { background-position:    0px; }
-           to { background-position: -256px; }
-      }
-
       /* Gliding animation using translate */
       /* Moving 1600px, to accomodate for large screens */
       @-webkit-keyframes fly {
@@ -160,31 +143,6 @@
           transform: translate(-1600px, 1600px);
         }
       }
-      @-moz-keyframes fly {
-        from {
-          transform: translate(0, 0);
-        }
-        to {
-          transform: translate(-1600px, 1600px);
-        }
-      }
-      @-o-keyframes fly {
-        from {
-          transform: translate(0, 0);
-        }
-        to {
-          transform: translate(-1600px, 1600px);
-        }
-      }
-      @keyframes fly {
-        from {
-          transform: translate(0, 0);
-        }
-        to {
-          transform: translate(-1600px, 1600px);
-        }
-      }
-
     </style>
   </head>
   <body>
@@ -210,25 +168,21 @@
     <div class="toaster t2 p31"></div>
     <div class="toaster t1 p32"></div>
     <div class="toast tst3 p33"></div>
-
     <!-- wave 1 of (fast delayed) objects -->
     <div class="toaster t4 p27"></div>
     <div class="toaster t4 p10"></div>
     <div class="toaster t4 p25"></div>
     <div class="toaster t4 p29"></div>
-
     <!-- wave 2 of (delayed) objects -->
     <div class="toaster t5 p15"></div>
     <div class="toaster t5 p18"></div>
     <div class="toaster t5 p22"></div>
-
     <!-- wave 3 of (delayed) objects -->
     <div class="toaster t6 p6"></div>
     <div class="toaster t6 p11"></div>
     <div class="toaster t6 p15"></div>
     <div class="toaster t6 p19"></div>
     <div class="toaster t6 p23"></div>
-
     <!-- wave 5 of (delayed) objects -->
     <div class="toast tst4 p10"></div>
     <div class="toast tst4 p23"></div>
@@ -238,18 +192,15 @@
     <div class="toaster t7 p16"></div>
     <div class="toaster t7 p20"></div>
     <div class="toaster t7 p24"></div>
-
     <!-- wave 6 of (delayed) objects -->
     <div class="toaster t8 p8"></div>
     <div class="toaster t8 p13"></div>
     <div class="toaster t8 p17"></div>
     <div class="toaster t8 p25"></div>
-
     <!-- wave 7 of (delayed) objects -->
     <div class="toaster t9 p14"></div>
     <div class="toaster t9 p18"></div>
     <div class="toaster t9 p21"></div>
     <div class="toaster t9 p26"></div>
-
   </body>
 </html>
