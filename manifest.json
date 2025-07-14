@@ -1,9 +1,9 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "Flying Toasters New Tab",
   "description": "This extension replaces the new tab with the Flying Toasters screensaver from After Dark translated to the web by Bryan Braun.",
-  "version": "1.0.1",
+  "version": "1.1.0",
 
   "chrome_url_overrides": {
     "newtab": "newtab.html"
